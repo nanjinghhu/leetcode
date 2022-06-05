@@ -1,4 +1,4 @@
-package com.alhata.leetcode.sort;
+package com.alhata.leetcode.curmax;
 
 /**
  * You are given an integer array arr of length n that represents a permutation of the integers in the range [0, n - 1].
@@ -32,20 +32,23 @@ package com.alhata.leetcode.sort;
  * 0 <= arr[i] < n
  * All the elements of arr are unique.
  */
-public class N769MaxChunksToMakeSorted {
+public class N769MaxChunksToMakeArraySorted {
     public static void main(String[] args) {
 
     }
 
-    //since the number resides from 0 to n-1, then if max(arr[i], arr[i+1], ... arr[j]) == j then it is a splittable chunk
+    /**
+     * the idea is iterate on the arr, maintain the current max, if curMax = i(i is current index), then there is a partition
+     * @param arr arr
+     * @return number of partitions
+     */
     public int maxChunksToSorted(int[] arr) {
-        int count = 0, max = 0;
+        int curMax = arr[0], count = 0;
         for(int i=0;i<arr.length;i++) {
-            max = Math.max(max, arr[i]);
-
-            if(max == i){
-                count++;
+            if(arr[i] > curMax) {
+                curMax = arr[i];
             }
+            if(curMax == i) count++;
         }
 
         return count;
