@@ -36,6 +36,8 @@ import java.util.Map;
  * cpdomain[i] follows either the "repi d1i.d2i.d3i" format or the "repi d1i.d2i" format.
  * repi is an integer in the range [1, 104].
  * d1i, d2i, and d3i consist of lowercase English letters.
+ *
+ * Note: Interviewed by Indeed Karat
  */
 public class N811SubDomainVisitCount {
     public static void main(String[] args) {
