@@ -41,10 +41,11 @@ import java.util.Map;
  */
 public class N811SubDomainVisitCount {
     public static void main(String[] args) {
-
+        String[] s = new String[]{"9001 discuss.leetcode.com", "2000 github.com", "100 indeed.org"};
+        System.out.println(subdomainVisits(s));
     }
 
-    public List<String> subdomainVisits(String[] cpdomains) {
+    public static List<String> subdomainVisits(String[] cpdomains) {
         Map<String, Integer> records = new HashMap<>();
         for(String cpDomain: cpdomains) {
             String[] countDomain = cpDomain.split(" ");
