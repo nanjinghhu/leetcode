@@ -37,10 +37,10 @@ import java.util.Stack;
  */
 public class N227BasicCalculatorII {
     public static void main(String[] args) {
-
+        System.out.println(calculate("2+3*2/2"));
     }
 
-    public int calculate(String s) {
+    public static int calculate(String s) {
         int num = 0;
         char sign = '+';
         Stack<Integer> stack = new Stack<>();

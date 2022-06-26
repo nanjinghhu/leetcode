@@ -35,13 +35,11 @@ import java.util.Stack;
  *
  * TC: O(n)
  * OC: O(n)
+ *
+ *
  */
-public class N224Calculator {
-    public static void main(String[] args) {
 
-    }
-
-    public int calculate(String s) {
+/*
         int res = 0, sign = 1, number = 0;
         Stack<Integer> stack = new Stack<>();
         stack.push(sign);
@@ -61,5 +59,32 @@ public class N224Calculator {
 
         if(number != 0) res += sign * number;
         return res;
+ */
+public class N224Calculator {
+    public static void main(String[] args) {
+        System.out.println(calculate("-(2-3)"));
+    }
+
+    public static int calculate(String s) {
+        if(s == null || s.length() == 0) return 0;
+        Stack<Integer> stack = new Stack<>();
+        int res = 0, number = 0, sign = 1;
+        stack.push(sign);
+        for(int i=0; i< s.length();i++) {
+            if(s.charAt(i) >= '0' && s.charAt(i) <= '9'){
+                number = 10*number + s.charAt(i)-'0';
+            }else if(s.charAt(i) == '+' || s.charAt(i) == '-') {
+                res += sign * number;
+                sign = stack.peek() * (s.charAt(i) == '+' ? 1 : -1);
+                number = 0;
+            }else if(s.charAt(i) == '('){
+                stack.push(sign);
+            }else if(s.charAt(i) == ')') {
+                stack.pop();
+            }
+        }
+
+        if(number != 0) res += sign*number;
+        return  res;
     }
 }

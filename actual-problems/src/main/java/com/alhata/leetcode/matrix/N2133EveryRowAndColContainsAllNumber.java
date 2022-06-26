@@ -31,28 +31,36 @@ package com.alhata.leetcode.matrix;
  */
 public class N2133EveryRowAndColContainsAllNumber {
     public static void main(String[] args) {
-
+        int[][] matrix = new int[][]{
+                {1,2,3},
+                {3,1,2},
+                {3,2,1}
+        };
+        System.out.println(checkValid(matrix));
     }
 
-    public boolean checkValid(int[][] matrix) {
-        int m = matrix.length, n = matrix[0].length;
+
+    private static boolean checkValid(int[][] board) {
+        if(board == null || board.length == 0 || board[0].length == 0) return true;
+        int m = board.length, n = board[0].length;
+        if(m!=n) return false;
         for(int i=0;i<m;i++) {
             for(int j=0;j<n;j++) {
-                int pos = Math.abs(matrix[i][j]) - 1;
-                if(matrix[i][pos] < 0) return false;
-                matrix[i][pos] = -matrix[i][pos];
+                int pos = Math.abs(board[i][j]) - 1;
+                if(board[i][pos] < 0){
+                    return false;
+                }
+                board[i][pos] *= - 1;
             }
         }
 
         for(int j=0;j<n;j++) {
             for(int i=0;i<m;i++) {
-                int pos = Math.abs(matrix[i][j]) - 1;
-                if(matrix[pos][j] > 0) return false;
-                matrix[pos][j] = -matrix[pos][j];
+                int pos = Math.abs(board[i][j]) - 1;
+                if(board[pos][j] > 0) return false;
+                board[pos][j] *= -1;
             }
         }
-
         return true;
     }
-
 }

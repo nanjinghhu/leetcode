@@ -6,7 +6,8 @@ import java.util.List;
 
 /**
  * the image has random shapes filled with 0s, separated by 1s. Find all the shapes. Each shape is represented by coordinates of all the elements inside.
- *
+ * Space: O(M*N)
+ * Time: O(M*N)
  */
 public class KaratFindMultipleShapes {
     public static void main(String[] args) {
