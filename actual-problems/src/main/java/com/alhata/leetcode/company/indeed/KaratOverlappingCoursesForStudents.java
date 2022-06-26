@@ -1,4 +1,4 @@
-package com.alhata.leetcode.string;
+package com.alhata.leetcode.company.indeed;
 
 import com.alhata.leetcode.common.CommonUtil;
 

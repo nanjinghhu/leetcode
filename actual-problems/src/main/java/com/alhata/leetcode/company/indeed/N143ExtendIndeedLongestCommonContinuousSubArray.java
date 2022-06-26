@@ -1,4 +1,4 @@
-package com.alhata.leetcode.dp;
+package com.alhata.leetcode.company.indeed;
 
 import java.util.ArrayList;
 import java.util.Arrays;

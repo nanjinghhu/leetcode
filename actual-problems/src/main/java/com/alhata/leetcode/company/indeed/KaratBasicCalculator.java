@@ -1,4 +1,4 @@
-package com.alhata.leetcode.string;
+package com.alhata.leetcode.company.indeed;
 
 /**
  * given a input, for example, "2+3-999", only including '-' and '+' operators, return the result
