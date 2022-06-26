@@ -17,7 +17,7 @@ import java.util.List;
  *
  *  this problem derives from the Indeed interview questions
  */
-public class N143ExtendIndeedLongestCommonContinuousSubArray {
+public class KaratLongestCommonContinuousSubArray {
     public static void main(String[] args) {
         List<String> user1 = Arrays.asList("3234.html", "xys.html", "7hsaa.html", "123.html");
         List<String> user2 = Arrays.asList("3234.html", "sdhsfjdsh.html", "xys.html", "123.html", "7hsaa.html");

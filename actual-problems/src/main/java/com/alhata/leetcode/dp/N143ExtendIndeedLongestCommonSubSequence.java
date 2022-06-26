@@ -1,4 +1,4 @@
-package com.alhata.leetcode.company.indeed;
+package com.alhata.leetcode.dp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,11 @@ import java.util.List;
  * ["3234.html", "xys.html", "7hsaa.html"]
  *
  *  this problem derives from the Indeed interview questions
+ *
+ *  Leetcode: 443
+ *
+ *  SC: O(M*N)
+ *  TC: O(M*N)
  */
 public class N143ExtendIndeedLongestCommonSubSequence {
     public static void main(String[] args) {
